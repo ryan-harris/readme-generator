@@ -1,8 +1,13 @@
-// TODO: Return markdown string for README file given a data object.
 function generateMarkdown(data) {
   return `
-# ${data.title}
-//TODO badge and repo link
+# ${data.project}
+
+[![License](https://img.shields.io/badge/License-${data.license.replace(
+    " ",
+    "%20"
+  )}-blue.svg)](${data.html_url}/${data.project
+    .toLowerCase()
+    .replace(" ", "-")})
 
 ## Description
 
@@ -47,9 +52,13 @@ ${data.test}
 
 ## Questions
 
-<img src="${data.avatar_url}" alt="avatar" style="border-radius: 16px" width="30" />
+<img src="${
+    data.avatar_url
+  }" alt="avatar" style="border-radius: 40px" width="80" />
 
-If you have questions about the repo, open an issue or contact [${data.username}](${data.html_url}) directly at ${data.email}
+If you have questions about the repo, open an issue or contact [${
+    data.username
+  }](${data.html_url}) directly at ${data.email}
 
 `;
 }
