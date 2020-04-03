@@ -23,7 +23,7 @@ const questions = [
     type: "list",
     name: "license",
     message: "What kind of license should your project have?",
-    choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "MPL 2.0"]
+    choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "MPL 2.0", "None"]
   },
   {
     name: "install",
@@ -64,7 +64,7 @@ function init() {
     api.getUser(answers.username).then(userData => {
       // combine answers and userData to a single object
       const data = { ...userData, ...answers };
-      writeToFile("./output/README.md", generateMarkdown(data));
+      writeToFile("output/README.md", generateMarkdown(data));
     });
   });
 }
