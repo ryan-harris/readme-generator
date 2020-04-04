@@ -8,6 +8,7 @@ Readme Generator is a command-line application that dynamically generates a READ
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Example](#example)
 - [Contributing](#contributing)
 - [Questions](#questions)
 
